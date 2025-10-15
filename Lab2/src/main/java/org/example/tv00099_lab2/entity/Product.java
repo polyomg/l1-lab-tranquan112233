@@ -1,0 +1,13 @@
+package org.example.tv00099_lab2.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Product {
+    private String name;
+    private double price;
+}
