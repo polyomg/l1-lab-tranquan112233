@@ -2,25 +2,25 @@ package com.poly.lab7.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
-@Table(name = "Products")
+@Table(name = "products")
 public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String name;
-    private Double price;
-
+    Integer id;
+    String name;
+    String image;
+    Double price;
     @Temporal(TemporalType.DATE)
     @Column(name = "Createdate")
-    private Date createDate = new Date();
-
+    Date createDate = new Date();
+    Boolean available;
     @ManyToOne
     @JoinColumn(name = "Categoryid")
-    private Category category;
+    Category category;
 }
