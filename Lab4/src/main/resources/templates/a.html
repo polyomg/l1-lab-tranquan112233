@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result Page</title>
+</head>
+<body>
+<!-- message trong Model -->
+<h1 th:text="${message}">Model message</h1>
+
+<!-- message trong param (redirect) -->
+<h1 th:text="${param.message}">Param message</h1>
+</body>
+</html>
